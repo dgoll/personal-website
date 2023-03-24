@@ -1,0 +1,96 @@
+:root {
+    font-family: 'EB Garamond', Garamond, serif;
+    font-size: 20px;
+    line-height: 1.2;
+    scroll-behavior: smooth;
+    --background-color: #f9f4d2;
+    --highlight-color: #e63946;
+    --light-color: #a8dadc;
+    --medium-color: #f64e23;
+    --dark-color: #455448;
+    background-color: var(--background-color);
+    color: var(--dark-color);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: [left] minmax(1em,1fr) [main] minmax(10em,40em) [right] minmax(10em,1fr);
+    grid-template-rows: repeat(7,min-content) auto repeat(2,min-content);
+    grid-gap: 0 2em;
+}
+
+header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    background-color: var(--medium-color);
+    height: 7rem;
+}
+
+nav {
+    grid-column: right;
+    grid-row: 2;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 42;
+}
+
+main {
+    grid-column: main;
+    grid-row: 2 / -1
+}
+
+section {
+    padding: 0.2rem 0.5rem;
+}
+
+.publisher-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.publisher-logo {
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 45%;
+    border: 0.2rem var(--dark-color) solid;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}   
+
+#about p {
+    font-size: 30px;
+}
+
+#about h1 {
+    font-size: 50px;
+}
+
+/* Navbar styles */
+
+.navlinks {
+    display: block;
+}
+
+.navlinks li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0;
+}
+
+.navlinks li:hover {
+    text-decoration: underline var(--dark-color) 3px;
+}
+
+.navlinks li a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
